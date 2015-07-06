@@ -5,10 +5,6 @@ namespace ContactManager
 {
     class Program
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
         static void Main()
         {
             using (var logger = new Logger())
