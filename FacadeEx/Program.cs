@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FacadeEx
+namespace facade_ex
 {
     // Legacy code that cannot be modified
     public class DateFormat

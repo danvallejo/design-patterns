@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ThreadsEx
+namespace singleton_ex
 {
     public class SingletonThread
     {

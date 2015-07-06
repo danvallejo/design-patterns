@@ -7,8 +7,8 @@
     <ProjectGuid>{96C3DEF2-B9EF-4F36-9AD1-E25DD8DFA8E6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FacadeEx</RootNamespace>
-    <AssemblyName>FacadeEx</AssemblyName>
+    <RootNamespace>facade_ex</RootNamespace>
+    <AssemblyName>facade-ex</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
