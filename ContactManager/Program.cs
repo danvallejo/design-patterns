@@ -12,8 +12,7 @@ namespace ContactManager
                 logger.WriteEntry(LoggerLevel.Informational, "Entering Main()");
             }
 
-            var commands = new[]
-            {
+            var commands = new[] {
                 "cd \\",
                 "md test",
                 "cd test",
