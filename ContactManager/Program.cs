@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ContactManager
 {
@@ -65,7 +61,6 @@ namespace ContactManager
                     File.Delete(pieces[1]);
                 }
             }
-
 
             using (var logger = new Logger())
             {

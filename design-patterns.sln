@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "facade", "facade\facade.csproj", "{116C506E-84BF-4189-9FB0-5C795550E3F8}"
 EndProject
@@ -49,6 +49,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton-ex", "singleton-ex\singleton-ex.csproj", "{EF73A0D5-097A-46BF-89BD-6044AD416A3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "facade-ex", "FacadeEx\facade-ex.csproj", "{96C3DEF2-B9EF-4F36-9AD1-E25DD8DFA8E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions", "Solutions", "{D6185FA6-1C04-480C-A4B1-732EF5497708}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton", "singleton\singleton.csproj", "{826C630C-0721-4A84-A769-926CDB8A90D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -152,8 +156,16 @@ Global
 		{96C3DEF2-B9EF-4F36-9AD1-E25DD8DFA8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96C3DEF2-B9EF-4F36-9AD1-E25DD8DFA8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96C3DEF2-B9EF-4F36-9AD1-E25DD8DFA8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{826C630C-0721-4A84-A769-926CDB8A90D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{826C630C-0721-4A84-A769-926CDB8A90D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{826C630C-0721-4A84-A769-926CDB8A90D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{826C630C-0721-4A84-A769-926CDB8A90D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{518B2C52-4899-47E8-B441-2A9E63F54BAB} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
+		{E47D67FF-39CE-4BEA-91DD-D3F1D282B637} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 	EndGlobalSection
 EndGlobal
