@@ -32,7 +32,7 @@ namespace facade_ex_solution
     }
 
     // Facade
-    public class Formatter
+    public static class Formatter
     {
         private static DateFormat dateFormatter;
         private static IntFormatter intFormatter;
@@ -62,7 +62,7 @@ namespace facade_ex_solution
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Date is {0}", Formatter.ToString(DateTime.Now));
 

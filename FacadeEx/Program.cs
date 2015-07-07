@@ -43,7 +43,7 @@ namespace facade_ex
         {
             Console.WriteLine("Date is {0}", new DateFormat(2).FormatDate(DateTime.Now));
 
-            Console.WriteLine("Value is {0}",new IntFormatter().IntFormat(123));
+            Console.WriteLine("Value is {0}", new IntFormatter().IntFormat(123));
 
             Console.WriteLine("Money is {0}", Money.FormatCurrency(1234567.89));
 
