@@ -1,5 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "facade", "facade\facade.csproj", "{116C506E-84BF-4189-9FB0-5C795550E3F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adapter", "adapter\adapter.csproj", "{7326C4D2-36FE-40F4-BAA6-11E928C309A8}"
@@ -53,6 +55,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton", "singleton\singleton.csproj", "{826C630C-0721-4A84-A769-926CDB8A90D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "facade-ex-solution", "facade-ex-solution\facade-ex-solution.csproj", "{51053E52-8256-475F-9D02-3840A90C8798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton-logger-ex", "singleton-logger-ex\singleton-logger-ex.csproj", "{966FFC31-CEFE-409D-B561-BD5662C7BADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton-logger-ex-solution", "singleton-logger-ex-solution\singleton-logger-ex-solution.csproj", "{B0174F01-6D2B-4AFC-84C7-28240622AD00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -164,13 +170,22 @@ Global
 		{51053E52-8256-475F-9D02-3840A90C8798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51053E52-8256-475F-9D02-3840A90C8798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51053E52-8256-475F-9D02-3840A90C8798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966FFC31-CEFE-409D-B561-BD5662C7BADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966FFC31-CEFE-409D-B561-BD5662C7BADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966FFC31-CEFE-409D-B561-BD5662C7BADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966FFC31-CEFE-409D-B561-BD5662C7BADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0174F01-6D2B-4AFC-84C7-28240622AD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0174F01-6D2B-4AFC-84C7-28240622AD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0174F01-6D2B-4AFC-84C7-28240622AD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0174F01-6D2B-4AFC-84C7-28240622AD00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E47D67FF-39CE-4BEA-91DD-D3F1D282B637} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 		{518B2C52-4899-47E8-B441-2A9E63F54BAB} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
+		{E47D67FF-39CE-4BEA-91DD-D3F1D282B637} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 		{51053E52-8256-475F-9D02-3840A90C8798} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
+		{B0174F01-6D2B-4AFC-84C7-28240622AD00} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 	EndGlobalSection
 EndGlobal
