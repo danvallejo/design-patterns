@@ -7,26 +7,28 @@ namespace singleton_thread
     public class SingletonThread
     {
         private static SingletonThread singleton;
-
         private static object sync = new object();
 
         private SingletonThread()
         {
         }
 
-        public static SingletonThread GetInstance()
+        public static SingletonThread Instance
         {
-            if (singleton == null)
+            get
             {
-                lock (sync)
+                if (singleton == null)
                 {
-                    if (singleton == null)
+                    lock (sync)
                     {
-                        singleton = new SingletonThread();
+                        if (singleton == null)
+                        {
+                            singleton = new SingletonThread();
+                        }
                     }
                 }
+                return singleton;
             }
-            return singleton;
         }
     }
 
@@ -34,8 +36,8 @@ namespace singleton_thread
     {
         static void Main()
         {
-            SingletonThread one = SingletonThread.GetInstance();
-            SingletonThread two = SingletonThread.GetInstance();
+            SingletonThread one = SingletonThread.Instance;
+            SingletonThread two = SingletonThread.Instance;
             if (one == two)
             {
                 Console.WriteLine("Singleton's are the same");
