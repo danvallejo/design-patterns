@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var myConcrete = new Concrete { Id = "1", Name = "one" };
 
