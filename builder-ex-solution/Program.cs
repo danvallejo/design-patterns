@@ -8,7 +8,7 @@ namespace builder_ex_solution
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var shop = new Shop();
 
@@ -25,7 +25,7 @@ namespace builder_ex_solution
             Console.ReadLine();
         }
 
-        static void BuildIt(Shop shop, Builder builder)
+        static void BuildIt(Shop shop, IBuilder builder)
         {
             shop.Construct(builder);
 

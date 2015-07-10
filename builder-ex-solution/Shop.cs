@@ -3,7 +3,7 @@
     // Director
     public class Shop
     {
-        public void Construct(Builder builder)
+        public void Construct(IBuilder builder)
         {
             builder.BuildFrame();
             builder.BuildEngine();

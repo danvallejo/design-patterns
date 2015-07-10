@@ -1,10 +1,10 @@
 ﻿namespace builder_ex_solution
 {
-    public abstract class Builder
+    public interface IBuilder
     {
-        public abstract void BuildFrame();
-        public abstract void BuildEngine();
+        void BuildFrame();
+        void BuildEngine();
 
-        public abstract Product GetResult();
+        Product GetResult();
     }
 }
