@@ -1,17 +1,12 @@
 ﻿using System;
 using System.IO;
 
-namespace ContactManager
+namespace chain_of_responsiblity_ex
 {
     class Program
     {
         static void Main()
         {
-            using (var logger = new Logger())
-            {
-                logger.WriteEntry(LoggerLevel.Informational, "Entering Main()");
-            }
-
             var commands = new[] {
                 "cd \\",
                 "md test",
@@ -55,11 +50,6 @@ namespace ContactManager
                 {
                     File.Delete(pieces[1]);
                 }
-            }
-
-            using (var logger = new Logger())
-            {
-                logger.WriteEntry(LoggerLevel.Informational, "Exiting Main()");
             }
         }
     }

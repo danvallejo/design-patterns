@@ -1,4 +1,6 @@
-﻿namespace state
+﻿using System;
+
+namespace state
 {
     class Program
     {
@@ -11,6 +13,8 @@
             vendingMachine.DepositNickel();
             vendingMachine.DepositNickel();
             vendingMachine.DepositNickel();
+
+            Console.ReadLine();
         }
     }
 }
