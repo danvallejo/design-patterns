@@ -98,6 +98,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template-ex-solution", "tem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iterator-ex-solution", "iterator-ex-solution\iterator-ex-solution.csproj", "{48CF5727-13BB-4C31-AF0A-9EB596FE4024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "decorator-reports", "decorator-reports\decorator-reports.csproj", "{77814D2D-1B76-4497-8D28-91F16E43E702}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -288,6 +290,10 @@ Global
 		{48CF5727-13BB-4C31-AF0A-9EB596FE4024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48CF5727-13BB-4C31-AF0A-9EB596FE4024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48CF5727-13BB-4C31-AF0A-9EB596FE4024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77814D2D-1B76-4497-8D28-91F16E43E702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77814D2D-1B76-4497-8D28-91F16E43E702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77814D2D-1B76-4497-8D28-91F16E43E702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77814D2D-1B76-4497-8D28-91F16E43E702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
