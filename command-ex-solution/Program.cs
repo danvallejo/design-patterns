@@ -11,7 +11,7 @@ namespace command_ex_solution
 
             var command = new PrintWordDocJob(receiver, "Word.doc");
 
-            var invoker = new Client();
+            var invoker = new PrintQueue();
             invoker.AddJob(command);
 
             invoker.Print();
@@ -69,9 +69,9 @@ namespace command_ex_solution
     /// <summary>
     /// The 'Invoker' class
     /// </summary>
-    class Client
+    class PrintQueue
     {
-        private readonly List<Job> jobs;
+        private readonly List<Job> jobs = new List<Job>();
 
         public void AddJob(Job job)
         {

@@ -10,7 +10,7 @@ namespace command_ex
 
             //var command = new PrintWordDocJob(receiver, "Word.doc");
 
-            //var invoker = new Client();
+            //var invoker = new PrintQueue();
             //invoker.AddJob(command);
 
             //invoker.Print();
