@@ -9,15 +9,14 @@ namespace flyweight_ex_solution
         int Width { get; set; }
 
         void Display();
-
     }
 
-    public class FlyweightA : IFlyweight
+    public class FlyweightBase : IFlyweight
     {
-        public FlyweightA()
+        public FlyweightBase(string symbol, int width)
         {
-            Symbol = "A";
-            Width = 8;
+            Symbol = symbol;
+            Width = width;
         }
 
         public string Symbol
@@ -38,29 +37,17 @@ namespace flyweight_ex_solution
         }
     }
 
-    public class FlyweightB : IFlyweight
+    public class FlyweightA : FlyweightBase
     {
-        public FlyweightB()
+        public FlyweightA() : base("A", 8)
         {
-            Symbol = "B";
-            Width = 10;
-        }
+        }       
+    }
 
-        public string Symbol
+    public class FlyweightB : FlyweightBase
+    {
+        public FlyweightB() : base("B", 10)
         {
-            get;
-            set;
-        }
-
-        public int Width
-        {
-            get;
-            set;
-        }
-
-        public void Display()
-        {
-            Console.WriteLine(Symbol);
         }
     }
 }

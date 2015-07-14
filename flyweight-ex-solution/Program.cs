@@ -10,6 +10,7 @@ namespace flyweight_ex_solution
     {
         static void Main()
         {
+            // singleton version
             var factory = FlyweightFactory.Instance;
 
             var flyweight1 = factory.GetFlyweight("A");
@@ -19,6 +20,9 @@ namespace flyweight_ex_solution
             flyweight1.Display();
             flyweight2.Display();
             flyweight3.Display();
+
+            // static class version
+            var flyweight4 = FlyweightFactoryStatic.GetFlyweight("A");
         }
     }
 }

@@ -49,4 +49,31 @@ namespace flyweight_ex_solution
             return flyweights[key];
         }
     }
+
+    public static class FlyweightFactoryStatic
+    {
+        private static Dictionary<string, IFlyweight> flyweights = new Dictionary<string, IFlyweight>();
+
+        public static IFlyweight GetFlyweight(string key)
+        {
+            if (!flyweights.ContainsKey(key))
+            {
+                switch (key)
+                {
+                    case "A":
+                        {
+                            flyweights[key] = new FlyweightA();
+                            break;
+                        }
+                    case "B":
+                        {
+                            flyweights[key] = new FlyweightB();
+                            break;
+                        }
+                }
+            }
+
+            return flyweights[key];
+        }
+    }
 }
