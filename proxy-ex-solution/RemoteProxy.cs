@@ -2,7 +2,7 @@
 
 namespace proxy_ex_solution
 {
-    class RemoteProxy:IRemote
+    class RemoteProxy : IRemote
     {
         private Remote remote = new Remote();
 
@@ -10,7 +10,7 @@ namespace proxy_ex_solution
         {
             Console.WriteLine("Changing channel to {0}", channel);
 
-           remote.ChangeChannel(channel);
+            remote.ChangeChannel(channel);
         }
 
         public int Volume

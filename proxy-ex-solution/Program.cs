@@ -6,7 +6,7 @@ namespace proxy_ex_solution
     {
         static void Main()
         {
-            var remote = new Remote();
+            var remote = new RemoteProxy();
 
             remote.Volume++;
             remote.Volume++;
