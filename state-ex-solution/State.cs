@@ -54,6 +54,12 @@ namespace state_ex_solution
         public override void DepositQuarter(VendingMachine vm)
         {
             vm.ChangeState(TwentyFive.Instance);
+
+            if (vm.ProductAmount == vm.CurrentState.Amount)
+            {
+                vm.ChangeState(Zero.Instance);
+                vm.Vend();
+            }
         }
 
         public override void ReturnChange(VendingMachine vm)
@@ -102,6 +108,12 @@ namespace state_ex_solution
         public override void DepositQuarter(VendingMachine vm)
         {
             vm.ChangeState(Fifty.Instance);
+
+            if (vm.ProductAmount == vm.CurrentState.Amount)
+            {
+                vm.ChangeState(Zero.Instance);
+                vm.Vend();
+            }
         }
 
         public override void ReturnChange(VendingMachine vm)
@@ -151,6 +163,12 @@ namespace state_ex_solution
         public override void DepositQuarter(VendingMachine vm)
         {
             vm.ChangeState(SeventyFive.Instance);
+
+            if (vm.ProductAmount == vm.CurrentState.Amount)
+            {
+                vm.ChangeState(Zero.Instance);
+                vm.Vend();
+            }
         }
 
         public override void ReturnChange(VendingMachine vm)

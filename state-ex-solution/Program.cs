@@ -12,6 +12,8 @@ namespace state_ex_solution
         {
             var vm = new VendingMachine();
 
+            vm.ProductAmount = 50;
+
             vm.DepositQuarter();
             vm.DepositQuarter();
             vm.DepositQuarter();

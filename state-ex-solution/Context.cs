@@ -23,6 +23,12 @@ namespace state_ex_solution
             }
         }
 
+        public int ProductAmount
+        {
+            get;
+            set;
+        }
+
         public void ChangeState(State to)
         {
             state = to;
@@ -43,7 +49,10 @@ namespace state_ex_solution
         {
             int amount = state.Amount;
 
-            Console.WriteLine("Returning {0}...", amount);
+            if (amount > 0)
+            {
+                Console.WriteLine("Returning {0}...", amount);
+            }
 
             while (state != Zero.Instance)
             {

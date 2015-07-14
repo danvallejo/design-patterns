@@ -14,6 +14,10 @@ namespace decorator
             borrowableBook.BorrowItem("mike");
             borrowableBook.Display();
 
+            borrowableBook.ReturnItem("jane");
+            borrowableBook.Display();
+
+
             var borrowableVideo = new Borrowable(video);
             borrowableVideo.BorrowItem("steve");
             borrowableVideo.BorrowItem("lisa");
