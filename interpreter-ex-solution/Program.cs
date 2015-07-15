@@ -128,12 +128,12 @@ namespace interpreter_ex_solution
             const string rpn = "4 2 +";
             var context = new Context(rpn);
 
-            //// Build the 'parse tree'
-            //var tree = new List<Expression>
-            //{
-            //    new ValueExpression(),
-            //    new OperatorExpression(),
-            //};
+            // Build the 'parse tree'
+            var tree = new List<Expression>
+            {
+                //new ValueExpression(),
+                //new OperatorExpression(),
+            };
 
             // Interpret
             foreach (var exp in tree)
