@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace interpreter_ex_solution
 {
@@ -14,11 +12,17 @@ namespace interpreter_ex_solution
         public Context(string input)
         {
             Input = input;
+            Stack = new Stack<int>();
         }
 
         public string Input { get; set; }
 
-        public int Output { get; set; }
+        public Stack<int> Stack { get; private set; }
+
+        public int Output
+        {
+            get { return Stack.Peek(); }
+        }
     }
 
     /// <summary>
@@ -26,122 +30,126 @@ namespace interpreter_ex_solution
     /// </summary>
     abstract class Expression
     {
-        public void Interpret(Context context)
+        public abstract bool Interpret(Context context);
+    }
+
+    class NumberExpression : Expression
+    {
+        public override bool Interpret(Context context)
         {
-            if (context.Input.Length == 0)
-                return;
+             var parts = context.Input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            if (context.Input.StartsWith(Nine))
+            var currentToken =  parts[0];
+
+            int result;
+            if (int.TryParse(currentToken, out result))
             {
-                context.Output += (9 * Multiplier);
-                context.Input = context.Input.Substring(2);
-            }
-            else if (context.Input.StartsWith(Four))
-            {
-                context.Output += (4 * Multiplier);
-                context.Input = context.Input.Substring(2);
-            }
-            else if (context.Input.StartsWith(Five))
-            {
-                context.Output += (5 * Multiplier);
-                context.Input = context.Input.Substring(1);
+                context.Stack.Push(result);
+                context.Input = string.Join(" ", parts.Skip(1));
+                return true;
             }
 
-            while (context.Input.StartsWith(One))
-            {
-                context.Output += (1 * Multiplier);
-                context.Input = context.Input.Substring(1);
-            }
+            return false;
         }
-
-        public abstract string One { get; }
-        public abstract string Four { get; }
-        public abstract string Five { get; }
-        public abstract string Nine { get; }
-        public abstract int Multiplier { get; }
     }
 
-    /// <summary>
-    /// A 'TerminalExpression' class
-    /// <remarks>
-    /// Thousand checks for the Roman Numeral M 
-    /// </remarks>
-    /// </summary>
-    class ThousandExpression : Expression
+    class PlusExpression : Expression
     {
-        public override string One { get { return "M"; } }
-        public override string Four { get { return " "; } }
-        public override string Five { get { return " "; } }
-        public override string Nine { get { return " "; } }
-        public override int Multiplier { get { return 1000; } }
+        public override bool Interpret(Context context)
+        {
+            var parts = context.Input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            var currentToken = parts[0];
+
+            if (currentToken == "+")
+            {
+                var y = context.Stack.Pop();
+                var x = context.Stack.Pop();
+
+                context.Stack.Push(x + y);
+
+                context.Input = string.Join(" ", parts.Skip(1));
+                return true;
+            }
+
+            return false;
+        }
     }
 
-    /// <summary>
-    /// A 'TerminalExpression' class
-    /// <remarks>
-    /// Hundred checks C, CD, D or CM
-    /// </remarks>
-    /// </summary>
-    class HundredExpression : Expression
+    class MinusExpression : Expression
     {
-        public override string One { get { return "C"; } }
-        public override string Four { get { return "CD"; } }
-        public override string Five { get { return "D"; } }
-        public override string Nine { get { return "CM"; } }
-        public override int Multiplier { get { return 100; } }
+        public override bool Interpret(Context context)
+        {
+            var parts = context.Input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+            var currentToken = parts[0];
+
+            if (currentToken == "-")
+            {
+                var y = context.Stack.Pop();
+                var x = context.Stack.Pop();
+
+                context.Stack.Push(x - y);
+
+                context.Input = string.Join(" ", parts.Skip(1));
+                return true;
+            }
+
+            return false;
+        }
     }
 
-    /// <summary>
-    /// A 'TerminalExpression' class
-    /// <remarks>
-    /// Ten checks for X, XL, L and XC
-    /// </remarks>
-    /// </summary>
-    class TenExpression : Expression
+    public class RPNEvaluator
     {
-        public override string One { get { return "X"; } }
-        public override string Four { get { return "XL"; } }
-        public override string Five { get { return "L"; } }
-        public override string Nine { get { return "XC"; } }
-        public override int Multiplier { get { return 10; } }
-    }
+        public static int Evaluate(string rpn)
+        {
+            var context = new Context(rpn);
 
-    /// <summary>
-    /// A 'TerminalExpression' class
-    /// <remarks>
-    /// One checks for I, II, III, IV, V, VI, VI, VII, VIII, IX
-    /// </remarks>
-    /// </summary>
-    class OneExpression : Expression
-    {
-        public override string One { get { return "I"; } }
-        public override string Four { get { return "IV"; } }
-        public override string Five { get { return "V"; } }
-        public override string Nine { get { return "IX"; } }
-        public override int Multiplier { get { return 1; } }
+            // Build the 'parse tree'
+            // expression ::= number | plus | minus
+            // plus ::= expression expression '+'
+            // minus ::= expression expression '-'
+            // digit = '0' | '1' | ... | '9'
+            // number ::= digit | digit number
+
+            var expressions = new List<Expression>
+            {
+                new NumberExpression(),
+                new PlusExpression(),
+                new MinusExpression(),
+            };
+
+            // Interpret
+            while (context.Input.Length > 0)
+            {
+                bool infiniteLoop = true;
+
+                foreach (var expression in expressions)
+                {
+                    if (expression.Interpret(context))
+                    {
+                        infiniteLoop = false;
+                        break;
+                    }
+                }
+
+                if (infiniteLoop)
+                {
+                    throw new Exception("Invalid token in expression :"+ context.Input);
+                }
+            }
+
+            return context.Output;
+        }
     }
 
     class Program
     {
         static void Main()
         {
-            const string rpn = "4 2 +";
-            var context = new Context(rpn);
+            const string rpn = "4 2 - 1 +";
 
-            // Build the 'parse tree'
-            var tree = new List<Expression>
-            {
-                //new ValueExpression(),
-                //new OperatorExpression(),
-            };
-
-            // Interpret
-            foreach (var exp in tree)
-            {
-                exp.Interpret(context);
-            }
-
-            Console.WriteLine("{0} = {1}", rpn, context.Output);
+            Console.WriteLine("{0} = {1}", rpn, RPNEvaluator.Evaluate(rpn));
 
             Console.ReadLine();
         }
