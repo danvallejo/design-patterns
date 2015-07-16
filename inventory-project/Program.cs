@@ -1,6 +1,4 @@
 ﻿using System;
-using common;
-using common.ui;
 
 namespace programming_project_i
 {
@@ -50,16 +48,12 @@ namespace programming_project_i
                         Console.Write("Quantity    :");
                         var quantity = Console.ReadLine();
 
-                        Console.Write("Cost        :");
-                        var cost = Console.ReadLine();
-
                         var item = new Item
                         {
                             ItemNumber = int.Parse(itemNumber),
                             Description = description,
                             Price = float.Parse(price),
                             Quantity = int.Parse(quantity),
-                            Cost = float.Parse(cost),
                         };
 
                         inventory.Add(item);
@@ -70,20 +64,8 @@ namespace programming_project_i
                     {
                         Console.WriteLine("Change Item");
 
-                        // Ask for the item#
                         Console.Write("Enter Item#");
                         var itemNumber = Console.ReadLine();
-
-                        // Check if it exists in the items[]
-                        //if (inventory.ItemExists(int.Parse(itemNumber)))
-                        //{
-                        //    // If you find it then ask for everything except item#
-                        //    inventory.Change();
-                        //}
-                        //else
-                        //{
-                        //    Console.WriteLine("Item not found.");
-                        //}
 
                         var existingItem = inventory.Find(int.Parse(itemNumber));
                         if (existingItem == null)
@@ -92,20 +74,19 @@ namespace programming_project_i
                         }
                         else
                         {
-                            Console.Write("Item#       : {0}", itemNumber);
+                            Console.Write("Item#            : {0}", itemNumber);
 
-                            Console.Write("OLD Description : {0}", existingItem.Description);
-                            Console.Write("New Description : ");
+                            Console.WriteLine("OLD Description  : {0}", existingItem.Description);
+                            Console.Write(    "New Description  : ");
                             var description = Console.ReadLine();
 
-                            Console.Write("Price       :");
+                            Console.WriteLine("OLD Price        : {0}", existingItem.Price);
+                            Console.Write(    "Price            : ");
                             var price = Console.ReadLine();
 
-                            Console.Write("Quantity    :");
+                            Console.WriteLine("OLD Quantity     : {0}", existingItem.Quantity);
+                            Console.Write(    "Quantity         : ");
                             var quantity = Console.ReadLine();
-
-                            Console.Write("Cost        :");
-                            var cost = Console.ReadLine();
 
                             var item = new Item
                             {
@@ -113,7 +94,6 @@ namespace programming_project_i
                                 Description = description,
                                 Price = float.Parse(price),
                                 Quantity = int.Parse(quantity),
-                                Cost = float.Parse(cost),
                             };  
 
                             inventory.Change(item);
@@ -156,8 +136,12 @@ namespace programming_project_i
 
                     case "5":
                     {
-                        inventory.ListAllBelow();
-                        break;
+                        var lines = inventory.ListAllBelow(5);
+
+                        foreach (var line in lines)
+                        {
+                            Console.WriteLine(line);
+                        } break;
                     }
 
                     case "6":
