@@ -126,6 +126,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memento-ex", "memento-ex\me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memento-ex-solution", "memento-ex-solution\memento-ex-solution.csproj", "{21C365F2-3389-4AD5-A266-612A3B7C2EEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediator-ex", "mediator-ex\mediator-ex.csproj", "{0689F6A8-6684-4303-A8CA-6A453462B4C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediator-ex-solution", "mediator-ex-solution\mediator-ex-solution.csproj", "{E747BC3E-D99F-42A2-A3FA-EDB9BC7956F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpreter", "interpreter\interpreter.csproj", "{508C3960-F6C6-4319-9679-B7333AC1FCBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpreter-ex", "interpreter-ex\interpreter-ex.csproj", "{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpreter-ex-solution", "interpreter-ex-solution\interpreter-ex-solution.csproj", "{D484A23D-245F-43CE-B489-2FF95FCDBC32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inventory-project", "inventory-project\inventory-project.csproj", "{11B17EFA-4874-42C2-97F5-EFB0421F73C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -372,6 +384,30 @@ Global
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0689F6A8-6684-4303-A8CA-6A453462B4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0689F6A8-6684-4303-A8CA-6A453462B4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0689F6A8-6684-4303-A8CA-6A453462B4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0689F6A8-6684-4303-A8CA-6A453462B4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E747BC3E-D99F-42A2-A3FA-EDB9BC7956F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E747BC3E-D99F-42A2-A3FA-EDB9BC7956F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E747BC3E-D99F-42A2-A3FA-EDB9BC7956F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E747BC3E-D99F-42A2-A3FA-EDB9BC7956F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B17EFA-4874-42C2-97F5-EFB0421F73C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B17EFA-4874-42C2-97F5-EFB0421F73C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B17EFA-4874-42C2-97F5-EFB0421F73C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B17EFA-4874-42C2-97F5-EFB0421F73C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -400,5 +436,8 @@ Global
 		{A912CB19-F74C-4AA6-A848-88056A5DD764} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 		{B87904EA-58BD-4076-95D2-93F57DB4F4FD} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
+		{E747BC3E-D99F-42A2-A3FA-EDB9BC7956F2} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
+		{D484A23D-245F-43CE-B489-2FF95FCDBC32} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
+		{11B17EFA-4874-42C2-97F5-EFB0421F73C0} = {2C42E67C-F0F0-445E-A855-E57E09B776E0}
 	EndGlobalSection
 EndGlobal
