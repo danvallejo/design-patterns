@@ -119,17 +119,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flyweight-ex-solution", "flyweight-ex-solution\flyweight-ex-solution.csproj", "{B87904EA-58BD-4076-95D2-93F57DB4F4FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visitor", "visitor\visitor.csproj", "{ECBE1450-EE29-4F1E-B3D8-F0B8AF12393C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memento", "memento\memento.csproj", "{606A9D9E-C4A4-4A4B-AE87-0C8D70B66FF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memento-ex", "memento-ex\memento-ex.csproj", "{0EE49344-37D9-48AA-8846-23951FA8B4D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "memento-ex-solution", "memento-ex-solution\memento-ex-solution.csproj", "{21C365F2-3389-4AD5-A266-612A3B7C2EEF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpreter", "interpreter\interpreter.csproj", "{508C3960-F6C6-4319-9679-B7333AC1FCBC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpreter-ex", "interpreter-ex\interpreter-ex.csproj", "{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpreter-ex-solution", "interpreter-ex-solution\interpreter-ex-solution.csproj", "{D484A23D-245F-43CE-B489-2FF95FCDBC32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -377,18 +372,6 @@ Global
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{508C3960-F6C6-4319-9679-B7333AC1FCBC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24DF2FF2-B56C-4BD7-8CB9-39D38A478D09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D484A23D-245F-43CE-B489-2FF95FCDBC32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -417,6 +400,5 @@ Global
 		{A912CB19-F74C-4AA6-A848-88056A5DD764} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 		{B87904EA-58BD-4076-95D2-93F57DB4F4FD} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 		{21C365F2-3389-4AD5-A266-612A3B7C2EEF} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
-		{D484A23D-245F-43CE-B489-2FF95FCDBC32} = {D6185FA6-1C04-480C-A4B1-732EF5497708}
 	EndGlobalSection
 EndGlobal
