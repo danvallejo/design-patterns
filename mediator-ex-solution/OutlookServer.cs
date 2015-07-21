@@ -8,7 +8,6 @@ namespace mediator_ex_solution
     public class OutlookServer
     {
         private List<MailClient> mailClients = new List<MailClient>();
-        private Dictionary<string, List<MailMessage>> messages = new Dictionary<string, List<MailMessage>>();
 
         public void Register(MailClient client)
         {
