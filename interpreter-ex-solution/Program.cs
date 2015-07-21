@@ -122,18 +122,18 @@ namespace interpreter_ex_solution
             // Interpret
             while (context.Input.Length > 0)
             {
-                bool infiniteLoop = true;
+                var startingLength = context.Input.Length;
 
                 foreach (var expression in expressions)
                 {
                     if (expression.Interpret(context))
                     {
-                        infiniteLoop = false;
                         break;
                     }
                 }
 
-                if (infiniteLoop)
+                // Check if anything was processed
+                if (context.Input.Length == startingLength)
                 {
                     throw new Exception("Invalid token in expression :"+ context.Input);
                 }
