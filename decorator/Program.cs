@@ -23,6 +23,10 @@ namespace decorator
             borrowableVideo.BorrowItem("lisa");
             borrowableVideo.Display();
 
+            // Alternative method for decorators
+            var aDifferentBorrowableBook = book.WithBorrowable();
+            aDifferentBorrowableBook.BorrowItem("steve");
+
             Console.ReadLine();
         }
     }
