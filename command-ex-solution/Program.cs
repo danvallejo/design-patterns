@@ -8,26 +8,43 @@ namespace command_ex_solution
         static void Main()
         {
             var receiver = new PrintServer();
+            var mailer = new MailServer();
 
-            var command = new PrintWordDocJob(receiver, "Word.doc");
+            var command = new DocJob(receiver, "Word.doc");
+            var command2 = new DocJob(mailer, "Word.doc");
 
-            var invoker = new PrintQueue();
+            var invoker = new ActionQueue();
             invoker.AddJob(command);
+            invoker.AddJob(command2);
 
-            invoker.Print();
+            invoker.PerformJobs();
 
             Console.ReadLine();
         }
     }
 
+    public interface IActionable
+    {
+        void DoAction(string fileName);
+    }
+
     /// <summary>
     /// The 'Receiver' class
     /// </summary>
-    class PrintServer
+    class PrintServer : IActionable
     {
-        public void Action(string fileName)
+        public void DoAction(string fileName)
         {
-            Console.WriteLine("Called Receiver.Action({0})", fileName);
+            Console.WriteLine("Called PrintServer.Action({0})", fileName);
+        }
+    }
+
+    class MailServer : IActionable
+    {
+        public void DoAction(string fileName)
+        {
+            Console.WriteLine("Called MailServer.Action({0})", fileName);
+
         }
     }
 
@@ -36,10 +53,10 @@ namespace command_ex_solution
     /// </summary>
     abstract class Job
     {
-        protected PrintServer receiver;
+        protected IActionable receiver;
 
         // Constructor
-        protected Job(PrintServer receiver)
+        protected Job(IActionable receiver)
         {
             this.receiver = receiver;
         }
@@ -50,11 +67,11 @@ namespace command_ex_solution
     /// <summary>
     /// The 'ConcreteCommand' class
     /// </summary>
-    class PrintWordDocJob : Job
+    class DocJob : Job
     {
         private readonly string fileName;
-        
-        public PrintWordDocJob(PrintServer receiver, string fileName) :
+
+        public DocJob(IActionable receiver, string fileName) :
             base(receiver)
         {
             this.fileName = fileName;
@@ -62,14 +79,14 @@ namespace command_ex_solution
 
         public override void Execute()
         {
-            receiver.Action(fileName);
+            receiver.DoAction(fileName);
         }
     }
 
     /// <summary>
     /// The 'Invoker' class
     /// </summary>
-    class PrintQueue
+    class ActionQueue
     {
         private readonly List<Job> jobs = new List<Job>();
 
@@ -78,7 +95,7 @@ namespace command_ex_solution
             jobs.Add(job);
         }
 
-        public void Print()
+        public void PerformJobs()
         {
             foreach (var job in jobs)
             {
