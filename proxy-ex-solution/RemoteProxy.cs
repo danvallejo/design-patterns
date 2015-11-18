@@ -4,7 +4,7 @@ namespace proxy_ex_solution
 {
     class RemoteProxy : IRemote
     {
-        private Remote remote = new Remote();
+        private IRemote remote = new Remote();
 
         public void ChangeChannel(int channel)
         {
