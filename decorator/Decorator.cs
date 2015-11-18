@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace decorator
 {
-    public class Decorator :LibraryItem
+    public abstract class Decorator :LibraryItem
     {
         protected LibraryItem libraryItem;
 

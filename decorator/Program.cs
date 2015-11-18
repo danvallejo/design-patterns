@@ -7,7 +7,7 @@ namespace decorator
         static void Main()
         {
             var book = new Book("Inside Design Patterns", "Smith");
-            var video = new Video("Jaws", "Benchley");
+            var video = new Video("Jaws", "Spielberg");
 
             var borrowableBook = new Borrowable(book);
             borrowableBook.BorrowItem("jane");
