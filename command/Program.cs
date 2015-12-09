@@ -6,16 +6,16 @@ namespace command
     {
         static void Main()
         {
-            var user = new User();
+            var invoker = new Invoker();
 
-            user.Compute('+', 100);
-            user.Compute('-', 25);
-            user.Compute('*', 2);
-            user.Compute('/', 3);
+            invoker.Compute('+', 100);
+            invoker.Compute('-', 25);
+            invoker.Compute('*', 2);
+            invoker.Compute('/', 3);
 
-            user.Undo(2);
+            invoker.Undo(2);
 
-            user.Redo(3);
+            invoker.Redo(3);
 
             Console.ReadLine();
         }

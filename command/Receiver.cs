@@ -2,7 +2,8 @@
 
 namespace command
 {
-    public class Calculator
+    // Receiver (Context)
+    public class Receiver
     {
         private int currentValue = 0;
 

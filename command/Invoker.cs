@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 namespace command
 {
-    public class User
+    // Invoker
+    public class Invoker
     {
-        private Calculator calculator = new Calculator();
+        private Receiver calculator = new Receiver();
         private List<Command> commands = new List<Command>();
         private int current = 0;
 

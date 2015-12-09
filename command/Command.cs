@@ -2,6 +2,7 @@
 
 namespace command
 {
+    // The actual parameters
     public abstract class Command
     {
         public abstract void Execute();
@@ -10,11 +11,11 @@ namespace command
 
     public class CalculatorCommand : Command
     {
-        private Calculator calculator;
+        private Receiver calculator;
         private char @operator;
         private int operand;
 
-        public CalculatorCommand(Calculator calculator, char @operator, int operand)
+        public CalculatorCommand(Receiver calculator, char @operator, int operand)
         {
             this.calculator = calculator;
             this.@operator = @operator;
